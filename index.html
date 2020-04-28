@@ -158,6 +158,102 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Probability_2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/28/Probability_2/">Probability_2</a>
+    </h1>
+  
+
+        
+        
+
+<a href="/2020/04/28/Probability_2/" class="archive-article-date">
+  	<time datetime="2020-04-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-28</time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>problem</p>
+<blockquote>
+<p>A total of $m$ items are to be sequentially distributed among $n$ cells, with each item independently being put in cell $j$ with probability $ p_j, j = 1, . . . , n$. Find the expected number of collisions that occur, where a collision occurs whenever an item is put into a nonempty cell.</p>
+</blockquote>
+<p>solution</p>
+<blockquote>
+<p>We make $X_i$ equal $1$ if a collision occurs when the $\displaystyle i^{th}$ item is placed, and letting it equal $0$ otherwise, we can express the total number of collisions $X$ as below<br>$$<br>X=\sum^{m}<em>{i=1}X_i<br>$$<br>which also means<br>$$<br>E[X]=\sum^{m}</em>{i=1}E[X_i]<br>$$<br>and we could give<br>$$<br>E[X_i]=\sum^{n}_{j=1}E[X_i\ |\ i^{th}\ ball\ is \ placed\ in \ cell\ j]\cdot p_j<br>$$</p>
+<p>$$<br>=\sum^{n}_{j=1}P[cell\ j \ is \ not \ empty\ |\ i^{th}\ ball\ is \ placed\ in \ cell\ j]\cdot p_j<br>$$</p>
+<p>$$<br>=\sum^{n}_{j=1}[1-(1-p_j)^{i-1}]\cdot p_j<br>$$</p>
+<p>$$<br>=1-\sum^{n}_{j=1}(1-p_j)^{i-1}\cdot p_j<br>$$</p>
+<p>so<br>$$<br>E[X]=\sum^{m}_{i=1}E[X_i]<br>$$</p>
+<p>$$<br>=m-\sum^{m}<em>{i=1}\sum^{n}</em>{j=1}(1-p_j)^{i-1}\cdot p_j<br>$$</p>
+<p>$$<br>=m-\sum^{n}<em>{j=1}\sum^{m}</em>{i=1}(1-p_j)^{i-1}\cdot p_j<br>$$</p>
+<p>$$<br>=m-\sum^{n}_{j=1}1-(1-p_j)^{m}<br>$$</p>
+<p>$$<br>=m-n+\sum^{n}_{j=1}(1-p_j)^{m}<br>$$</p>
+<p>especially, when<br>$$<br>p_1=p_2=…=p_n=\frac{1}{n}<br>$$</p>
+<p>$$<br>E[X]=m-n+\sum^{n}_{j=1}(1-\frac{1}{n})^{m}<br>$$</p>
+<p>$$<br>=m-n+n\cdot(1-\frac{1}{n})^{m}<br>$$</p>
+<p>$$<br>=m+n[(1-\frac{1}{n})^{m}-1]<br>$$</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">主页</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/28/Probability_2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Probability_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1022,123 +1118,10 @@
 
 
   
-    <article id="post-2020.3.12" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/12/29/2020.3.12/">清华笑话</a>
-    </h1>
-  
-
-        
-        
-
-<a href="/2019/12/29/2020.3.12/" class="archive-article-date">
-  	<time datetime="2019-12-28T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-29</time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><p>学堂路上大家骑着车子，但是并不用脚蹬车</p>
-<p>因为反正在清华一切都是往下滑的…</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>小明成功通过作弊取得了思修课4.0</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><p>谁是世界上最伟大的外科医生？</p>
-<p>——当然是大清万岁爷。他把中国教育的心脏改造成了世界教育的屁股。</p>
-<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>两副骨架在六教墓地里相遇了。</p>
-<p>“你是死于电子系课改前还是在此之后？”</p>
-<p>“我还活着呢。”</p>
-<h2 id="5"><a href="#5" class="headerlink" title="5."></a>5.</h2><p>清华一学生问老师：“老师，旅游是什么？”</p>
-<p>老师：“旅游就是人们在假期休息的时候，前往他们生活地区以外的地方感受不一样的风景和文化。”</p>
-<p>学生：“好的，但是休息是什么？”</p>
-<h2 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h2><p>昨天紫荆一号楼发生了地震，但同学们对此表示怀疑，因为紫荆公寓处在非地震带上。最后经过研究，并非是地震，而是</p>
-<p>某同学电电课本没放稳夜间掉落书架。</p>
-<h2 id="7"><a href="#7" class="headerlink" title="7."></a>7.</h2><p>万岁爷找来某学生干部：</p>
-<p>“我知道你在传播关于我的笑话。这很无礼。”</p>
-<p>“为什么？”</p>
-<p>“因为我是全校师生的伟大领袖、导师和朋友。”</p>
-<p>“天地良心，我没和任何人讲过这个笑话。”</p>
-<h2 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h2><p>清华大学电子系六大谜题：</p>
-<p>1、总是没人学习，作业却总是完成；</p>
-<p>2、作业总是完成，可是大家都不知道作业是什么；</p>
-<p>3、大家不知道作业是什么，但是考试成绩都很好；</p>
-<p>4、考试成绩很好，可所有人都不高兴；</p>
-<p>5、所有人都不高兴，可是没人抱怨；</p>
-<p>6、没人抱怨，可是大家都争着转系。</p>
-<h2 id="9"><a href="#9" class="headerlink" title="9."></a>9.</h2><p>清华大学某教师留期末论文，要求至少两千字。</p>
-<p>交上来的作业最少的也有五千字，老师很高兴，觉得同学们有想法，第二年将作业要求改成了至少五千字。</p>
-<p>第二年最少的作业也有一万字，老师喜出望外，将作业要求改成了鼓励多写。</p>
-<p>第三年放假前清华大学网络学堂服务器因过载宕机。</p>
-<h2 id="10"><a href="#10" class="headerlink" title="10."></a>10.</h2><p>一同学在学堂路说道：“垃圾学校。”</p>
-<p>该同学马上被相关人员带走。</p>
-<p>“我又没说哪个学校垃圾！”</p>
-<p>“废话，哪个学校垃圾谁心里还没点数吗！”</p>
-<h2 id="11"><a href="#11" class="headerlink" title="11."></a>11.</h2><p>某同学在新民路下坡处骑车摔倒，站立不能，半晌无人搭理。</p>
-<p>此人急中生智，大喊：“清华大学是世界三流学校！”</p>
-<p>路人大惊，连忙赶来将此人送往医院。</p>
-<h2 id="12"><a href="#12" class="headerlink" title="12."></a>12.</h2><p>一次清电系主任正在阅读一份关于转系申请正在增多的报告。<br>系主任转身跟自己的研究生说道，“要是我们批准所有转系申请，有一天这系可得就剩下你和我啦。”<br>研究生回应道：“别把我算进去。”</p>
-<h2 id="13"><a href="#13" class="headerlink" title="13."></a>13.</h2><p>某同学参加生物考试，因为实在不会就在卷子上写下了“二十一世纪是生物学的世纪”。</p>
-<p>后来此人因为考试不诚信被开除。</p>
-<h2 id="14"><a href="#14" class="headerlink" title="14."></a>14.</h2><p>如果在图书馆，你身边有一个可爱的小姐姐突然叹气说自己好累啊，你怎么做？</p>
-<p>——立刻阻止这种不符合“自强不息”精神的宣传。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">局外人</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/12/29/2020.3.12/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
