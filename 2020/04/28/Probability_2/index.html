@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Probability_2 | Berry&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="problem  A total of $m$ items are to be sequentially distributed among $n$ cells, with each item independently being put in cell $j$ with probability $ p_j, j &#x3D; 1, . . . , n$. Find the expected number">
+  <meta name="description" content="problem  Let $X$ be the length of the initial run in a random ordering of $n$ ones and $m$ zeroes. That is, if the first $k$ values are the same (either all ones or all zeroes), then $X\ge k$. Find $E">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Probability_2">
 <meta property="og:url" content="http://yoursite.com/2020/04/28/Probability_2/index.html">
 <meta property="og:site_name" content="Berry&#39;s Blog">
-<meta property="og:description" content="problem  A total of $m$ items are to be sequentially distributed among $n$ cells, with each item independently being put in cell $j$ with probability $ p_j, j &#x3D; 1, . . . , n$. Find the expected number">
+<meta property="og:description" content="problem  Let $X$ be the length of the initial run in a random ordering of $n$ ones and $m$ zeroes. That is, if the first $k$ values are the same (either all ones or all zeroes), then $X\ge k$. Find $E">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-28T10:25:41.856Z">
+<meta property="article:modified_time" content="2020-04-28T10:33:22.488Z">
 <meta property="article:author" content="Berry Jepsen">
 <meta property="article:tag" content="主页">
 <meta name="twitter:card" content="summary">
@@ -191,23 +191,11 @@
       
         <p>problem</p>
 <blockquote>
-<p>A total of $m$ items are to be sequentially distributed among $n$ cells, with each item independently being put in cell $j$ with probability $ p_j, j = 1, . . . , n$. Find the expected number of collisions that occur, where a collision occurs whenever an item is put into a nonempty cell.</p>
+<p>Let $X$ be the length of the initial run in a random ordering of $n$ ones and $m$ zeroes. That is, if the first $k$ values are the same (either all ones or all zeroes), then $X\ge k$. Find $E[X]$.</p>
 </blockquote>
 <p>solution</p>
 <blockquote>
-<p>We make $X_i$ equal $1$ if a collision occurs when the $\displaystyle i^{th}$ item is placed, and letting it equal $0$ otherwise, we can express the total number of collisions $X$ as below<br>$$<br>X=\sum^{m}<em>{i=1}X_i<br>$$<br>which also means<br>$$<br>E[X]=\sum^{m}</em>{i=1}E[X_i]<br>$$<br>and we could give<br>$$<br>E[X_i]=\sum^{n}_{j=1}E[X_i\ |\ i^{th}\ ball\ is \ placed\ in \ cell\ j]\cdot p_j<br>$$</p>
-<p>$$<br>=\sum^{n}_{j=1}P[cell\ j \ is \ not \ empty\ |\ i^{th}\ ball\ is \ placed\ in \ cell\ j]\cdot p_j<br>$$</p>
-<p>$$<br>=\sum^{n}_{j=1}[1-(1-p_j)^{i-1}]\cdot p_j<br>$$</p>
-<p>$$<br>=1-\sum^{n}_{j=1}(1-p_j)^{i-1}\cdot p_j<br>$$</p>
-<p>so<br>$$<br>E[X]=\sum^{m}_{i=1}E[X_i]<br>$$</p>
-<p>$$<br>=m-\sum^{m}<em>{i=1}\sum^{n}</em>{j=1}(1-p_j)^{i-1}\cdot p_j<br>$$</p>
-<p>$$<br>=m-\sum^{n}<em>{j=1}\sum^{m}</em>{i=1}(1-p_j)^{i-1}\cdot p_j<br>$$</p>
-<p>$$<br>=m-\sum^{n}_{j=1}1-(1-p_j)^{m}<br>$$</p>
-<p>$$<br>=m-n+\sum^{n}_{j=1}(1-p_j)^{m}<br>$$</p>
-<p>especially, when<br>$$<br>p_1=p_2=…=p_n=\frac{1}{n}<br>$$</p>
-<p>$$<br>E[X]=m-n+\sum^{n}_{j=1}(1-\frac{1}{n})^{m}<br>$$</p>
-<p>$$<br>=m-n+n\cdot(1-\frac{1}{n})^{m}<br>$$</p>
-<p>$$<br>=m+n[(1-\frac{1}{n})^{m}-1]<br>$$</p>
+<p>Let $L$ be the length of the initial run, then:<br>$$<br>E(X)=E(L|the\ first\ element\ is\ 1)\cdot\frac{n}{m+n}+E(L|the\ first\ element\ is\ 0)\cdot\frac{m}{m+n}<br>$$<br>If given: the first element is $1$, then $E(L|the\ first\ element\ is\ 1)+1$ will be the position of the first $0$.<br>$$<br>E(L|the\ first\ element\ is\ 1)+1=1+1+(n-1)\frac{1}{m+1}<br>$$<br>thus,<br>$$<br>E(L|the\ first\ element\ is\ 1)=1+(n-1)\frac{1}{m+1}=\frac{n+m}{m+1}<br>$$<br>similarly, if the first value is $0$,<br>$$<br>E(L|the\ first\ element\ is\ 0)=\frac{n+m}{n+1}<br>$$<br>So, the answer we want will be:<br>$$<br>E[X]=\frac{n+m}{m+1}\cdot\frac{n}{m+n}+\frac{n+m}{n+1}\cdot\frac{m}{m+n}=\frac{n}{m+1}+\frac{m}{n+1}<br>$$</p>
 </blockquote>
 
       
